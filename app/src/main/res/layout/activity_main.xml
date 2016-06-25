@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Activities.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <FrameLayout
+    android:id="@+id/fl_main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+
+    />
+
+    <RelativeLayout
+        android:id="@+id/rl_nav_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="130dp"
+        android:background="@color/colorDivider"
+        android:layout_gravity="bottom"
+        android:visibility="invisible"
+        >
+
+        <RadioGroup
+            android:id="@+id/rdg_1_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdb_1vg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="အရမ်းရီရတယ်"
+
+                />
+
+            <RadioButton
+                android:id="@+id/rdb_1g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ရီရတယ်"
+
+                />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_1_Next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rdg_1_rating"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="Next" />
+
+    </RelativeLayout>
+    <!--
+    /*** for action bar size ***/
+    android:layout_marginTop="?android:attr/actionBarSize"-->
+
+
+
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--android:src="@android:drawable/ic_dialog_email" />-->
+
+</android.support.design.widget.CoordinatorLayout>
